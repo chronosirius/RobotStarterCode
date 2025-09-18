@@ -23,6 +23,7 @@ public class JumpThoseHurdles {
         int shortestW = 0; // location of shortest hurdle
         int lastW = 0; //This creates a variable to save your max width.
         HashMap<Integer, Integer> map = new HashMap<>();
+        
         while (true) {
             w = findHurdle(); //Discuss with your partner what this line of code is intended to do.
             if (w == -1) {
