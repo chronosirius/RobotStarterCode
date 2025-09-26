@@ -1,5 +1,6 @@
 import kareltherobot.*;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class JumpThoseHurdles {
   // Find the hurdle with the max height!!
@@ -108,7 +109,17 @@ public class JumpThoseHurdles {
     private void loadWorld() {
         // line below "hardcodes" this to use one specific world
         // it would be better to ask the user...
-        String worldName = "Worldb.wld";
+        String world;
+        Scanner k = new Scanner(System.in);
+        System.out.println("select world (a, b): ");
+        world = k.nextLine();
+        while (world != "a" && world != "b" ) {
+            System.out.println("select world (a, b): ");
+            world = k.nextLine();
+        }
+        k.close();
+        
+        String worldName = "World" + world + ".wld";
         World.readWorld(worldName);
         World.setVisible(true);
         World.setDelay(5);
