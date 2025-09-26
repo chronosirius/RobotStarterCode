@@ -112,11 +112,7 @@ public class JumpThoseHurdles {
         String world;
         Scanner k = new Scanner(System.in);
         System.out.println("select world (a, b): ");
-        world = k.nextLine();
-        while (world != "a" && world != "b" ) {
-            System.out.println("select world (a, b): ");
-            world = k.nextLine();
-        }
+        world = k.nextLine().strip();
         k.close();
         
         String worldName = "World" + world + ".wld";
